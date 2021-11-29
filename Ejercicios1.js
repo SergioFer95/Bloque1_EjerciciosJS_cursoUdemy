@@ -83,11 +83,33 @@
 // EJERCICIO 5
 // Enunciado: programa que muestre todos los números divisores de un número introducido en un prompt.
 
-var numero = parseInt (prompt("Introduce un número y te diremos sus divisores", 1));
+// var numero = parseInt (prompt("Introduce un número y te diremos sus divisores", 1));
 
-for(var i = 1; i <= numero; i++){
+// for(var i = 1; i <= numero; i++){
 
-    if(numero%i == 0){
-        console.log("El divisor de " + numero + " es " + i);
+//     if(numero%i == 0){
+//         console.log("El divisor de " + numero + " es " + i);
+//     }
+// }
+
+
+// EJERCICIO 6
+// Enunciado: hacer un programa que nos diga si un número es par o impar. Tiene que tener ventaba prompt, tiene que comprobar si un número no es válido, que vuelva apedir el número.
+
+var userNumber = parseInt (prompt("Introduce un número y te diremos si es par o impar", 0));
+
+while(userNumber != isNaN){
+
+    if(userNumber%2 == 0){
+        console.log("El número que has elegido es par");
+        break;
+
+    }else if(userNumber%2 == 1){
+        console.log("El número que has elegido es impar");
+        break;
+
+    }else {
+        console.log("Por favor, introduce bien los carcateres que te solicitamos");
     }
+    userNumber = parseInt (prompt("Introduce un número y te diremos si es par o impar", 0));
 }
