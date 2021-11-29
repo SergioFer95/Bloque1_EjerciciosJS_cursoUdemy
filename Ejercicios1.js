@@ -119,10 +119,42 @@
 // EJERCICIO 7
 // Enunciado: haz la tabla de multiplicar de un número dado por el usuario.
 
-var numberTable = parseInt (prompt("Indícanos un número y te mostraremos toda su tabla de multiplicar", 0));
+// var numberTable = parseInt (prompt("Indícanos un número y te mostraremos toda su tabla de multiplicar", 0));
 
 
-for(var i = 0; i <= 10; i++){
-    var result = i * numberTable;
-    console.log(numberTable + " x " + i + " = " + result);
+// for(var i = 0; i <= 10; i++){
+//     var result = i * numberTable;
+//     console.log(numberTable + " x " + i + " = " + result);
+// }
+
+
+
+// EJERCICIO 8
+// Enunciado: crea una calculadora que:
+// 1) pida dos números por pantalla
+// 2) si metemos mal un número, nos vuelva a pedir que lo introduzcamos
+// 3) muestra por consola el resultado de sumar, restar, multiplicar y dividir esos dos números.
+
+var number1 = parseInt(prompt("Vamos a crear una calculadora. Primero introduce un número", 0));
+
+var number2 = parseInt(prompt("Ahora introduce otro", 0));
+
+while (number1 < 0 || number2 < 0 || number1 !=isNaN || number2 != isNaN) {
+    alert("Por favor, introduce caracteres correctos");
+    number1 = parseInt(prompt("Vamos a crear una calculadora. Primero introduce un número", 0));
+    number2 = parseInt(prompt("Ahora introduce otro", 0));
+
+    if(number1 >= 0 && number2 >= 0){
+        var suma = number1 + number2;
+        console.log("El valor de sumar " + number1 + " y " + number2 + " es = " + suma);
+        var resta = number1 - number2;
+        console.log("El valor de restar " + number1 + " y " + number2 + " es = " + resta);
+        var mult = number1 * number2;
+        console.log("El valor de multiplicar " + number1 + " y " + number2 + " es = " + mult);
+        var divi = number1 % number2;
+        console.log("El valor de dividir " + number1 + " y " + number2 + " es = " + divi);
+        break;
+    }
 }
+
+
