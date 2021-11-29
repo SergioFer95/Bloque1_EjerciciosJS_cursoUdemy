@@ -96,20 +96,33 @@
 // EJERCICIO 6
 // Enunciado: hacer un programa que nos diga si un número es par o impar. Tiene que tener ventaba prompt, tiene que comprobar si un número no es válido, que vuelva apedir el número.
 
-var userNumber = parseInt (prompt("Introduce un número y te diremos si es par o impar", 0));
+// var userNumber = parseInt (prompt("Introduce un número y te diremos si es par o impar", 0));
 
-while(userNumber != isNaN){
+// while(userNumber != isNaN){
 
-    if(userNumber%2 == 0){
-        console.log("El número que has elegido es par");
-        break;
+//     if(userNumber%2 == 0){
+//         console.log("El número que has elegido es par");
+//         break;
 
-    }else if(userNumber%2 == 1){
-        console.log("El número que has elegido es impar");
-        break;
+//     }else if(userNumber%2 == 1){
+//         console.log("El número que has elegido es impar");
+//         break;
 
-    }else {
-        console.log("Por favor, introduce bien los carcateres que te solicitamos");
-    }
-    userNumber = parseInt (prompt("Introduce un número y te diremos si es par o impar", 0));
+//     }else {
+//         console.log("Por favor, introduce bien los carcateres que te solicitamos");
+//     }
+//     userNumber = parseInt (prompt("Introduce un número y te diremos si es par o impar", 0));
+// }
+
+
+
+// EJERCICIO 7
+// Enunciado: haz la tabla de multiplicar de un número dado por el usuario.
+
+var numberTable = parseInt (prompt("Indícanos un número y te mostraremos toda su tabla de multiplicar", 0));
+
+
+for(var i = 0; i <= 10; i++){
+    var result = i * numberTable;
+    console.log(numberTable + " x " + i + " = " + result);
 }
